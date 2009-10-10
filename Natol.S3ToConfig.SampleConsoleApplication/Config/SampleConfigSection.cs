@@ -23,7 +23,7 @@ namespace Natol.S3ToConfig.SampleConsoleApplication.Config
             get
             {
                 if (_current == null)
-                    _current = (SampleConfigSection)ConfigurationManager.GetSection("sampleConfig");
+                   return (SampleConfigSection)ConfigurationManager.GetSection("sampleConfig");
                 return _current;
             }
         }
@@ -33,7 +33,7 @@ namespace Natol.S3ToConfig.SampleConsoleApplication.Config
         /// </summary>
         public static void RefreshConfig()
         {
-            ConfigurationManager.RefreshSection("distributedFileSyncConfig");
+            ConfigurationManager.RefreshSection("sampleConfig");
             _current = null;
         }
         
