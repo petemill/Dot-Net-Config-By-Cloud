@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natol.S3ToConfig.ProtectedConfiguration", "Natol.S3ToConfig.ProtectedConfiguration\Natol.S3ToConfig.ProtectedConfiguration.csproj", "{4E33AB9C-0960-4541-8AA0-7A9E08FF814C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natol.S3ToConfig.SampleConsoleApplication", "Natol.S3ToConfig.SampleConsoleApplication\Natol.S3ToConfig.SampleConsoleApplication.csproj", "{DC8F5724-E15E-4BB8-8BBF-EE81CFAB9288}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{4E33AB9C-0960-4541-8AA0-7A9E08FF814C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E33AB9C-0960-4541-8AA0-7A9E08FF814C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E33AB9C-0960-4541-8AA0-7A9E08FF814C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8F5724-E15E-4BB8-8BBF-EE81CFAB9288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8F5724-E15E-4BB8-8BBF-EE81CFAB9288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8F5724-E15E-4BB8-8BBF-EE81CFAB9288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8F5724-E15E-4BB8-8BBF-EE81CFAB9288}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

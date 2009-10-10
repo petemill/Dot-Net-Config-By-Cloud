@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Natol.S3ToConfig.ProtectedConfiguration
 {
-    public class Class1
+    public class ProtectedConfigurationProvider
     {
+
     }
 }
