@@ -5,7 +5,7 @@ How to convert any .net configuration section to load from Amazon S3:
 
    1. Add the Natol.S3ToConfig.ProtectedConfiguration.dll file to your projects bin folder, or the GAC on the machine
    2. Define the custom configuration provider in your app.config or web.config after the configSections element:
-         1. <configProtectedData defaultProvider="SampleProvider"><providers><add name="SampleProvider" type="Natol.S3ToConfig.ProtectedConfiguration.ProtectedConfigurationProvider, Natol.S3ToConfig.ProtectedConfiguration" /></providers> </configProtectedData>
+         1. <configProtectedData defaultProvider="s3ConfigSectionProvider"><providers><add name="s3ConfigSectionProvider" type="Natol.S3ToConfig.ProtectedConfiguration.ProtectedConfigurationProvider, Natol.S3ToConfig.ProtectedConfiguration" /></providers> </configProtectedData>
    3. Add a file to Amazon S3 at your desired location, giving it a key that represents the function of both your app and the context it runs in (remembering amazon s3 bucket names are globally unique). In this file, put the contents of your configuration section, eg:
          1. <sampleConfig><settings sampleConfigSetting="This Setting came from s3"></settings></sampleConfig>
    4. Replace the contents of your static configuration section with an EncyptedData element containing the location of your new configuration object in Amazon S3 and let it know our custom provider should handle the 'decryption', eg:
