@@ -1,14 +1,14 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natol.S3ToConfig.ProtectedConfiguration", "Natol.S3ToConfig.ProtectedConfiguration\Natol.S3ToConfig.ProtectedConfiguration.csproj", "{4E33AB9C-0960-4541-8AA0-7A9E08FF814C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natol.S3ToConfig.SampleConsoleApplication", "Natol.S3ToConfig.SampleConsoleApplication\Natol.S3ToConfig.SampleConsoleApplication.csproj", "{DC8F5724-E15E-4BB8-8BBF-EE81CFAB9288}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalReferences", "ExternalReferences", "{9AD0A143-11BA-4A5C-86E2-7BF82BC988A0}"
 	ProjectSection(SolutionItems) = preProject
 		ExternalReferences\LitS3.dll = ExternalReferences\LitS3.dll
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natol.S3ToConfig.ProtectedConfiguration", "Natol.S3ToConfig.ProtectedConfiguration\Natol.S3ToConfig.ProtectedConfiguration.csproj", "{4E33AB9C-0960-4541-8AA0-7A9E08FF814C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natol.S3ToConfig.SampleConsoleApplication", "Natol.S3ToConfig.SampleConsoleApplication\Natol.S3ToConfig.SampleConsoleApplication.csproj", "{DC8F5724-E15E-4BB8-8BBF-EE81CFAB9288}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
