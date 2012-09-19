@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Natol.S3ToConfig.SampleConsoleApplication</RootNamespace>
     <AssemblyName>Natol.S3ToConfig.SampleConsoleApplication</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -31,6 +31,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,6 +98,15 @@
     <Content Include="_ConfigurationContent\DemoConfiguration_LoadsFromS3.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="_ConfigurationContent\DemoConfiguration_LoadsFromEC2UserData.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_ConfigurationContent\DemoConfiguration_LoadedFromEC2UserData_default.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_ConfigurationContent\DemoConfiguration_LoadedFromEC2UserData_iaiminec2.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="_ConfigurationContent\DemoConfiguration_Static.config">
@@ -104,6 +114,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Natol.EC2UserDataToConfig\Natol.EC2UserDataToConfig.csproj">
+      <Project>{3D79620A-42FD-4A0D-8E8D-DE52168A51D6}</Project>
+      <Name>Natol.EC2UserDataToConfig</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Natol.S3ToConfig.ProtectedConfiguration\Natol.S3ToConfig.ProtectedConfiguration.csproj">
       <Project>{4E33AB9C-0960-4541-8AA0-7A9E08FF814C}</Project>
       <Name>Natol.S3ToConfig.ProtectedConfiguration</Name>
