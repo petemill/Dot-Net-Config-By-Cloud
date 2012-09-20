@@ -1,7 +1,7 @@
 This project contains libraries that enable .Net Configuration Sections to be loaded from sources relevant to services provided in the Amazon Web Services platform.
 
 This project was inspired by the following article:
-[http://www.wrox.com/WileyCDA/Section/Redirecting-Configuration-with-a-Custom-Provider.id-291932.html]
+http://www.wrox.com/WileyCDA/Section/Redirecting-Configuration-with-a-Custom-Provider.id-291932.html
 
 ...and a desire for secure centralised configuration management in .net!
 
@@ -18,25 +18,29 @@ This project was inspired by the following article:
 
 ## Load a different file's ConfigurationSection depending on the **UserData of an EC2 instance**
 *This can be used to store an app on an EC2 AMI image, but have it load different sets of configuration depending on the user-data string passed through at instance-creation time*
-- Add the Natol.EC2UserData.dll file to your project's bin folder
+- Add the Natol.EC2UserDataToConfig.dll file to your project's bin folder
 - Define the custom configuration provider in your app.config or web.config *after* the _configSections_ element:
+```xml
     <!-- defining our custom configuration provider -->
     <configProtectedData defaultProvider="s3ConfigSectionProvider">
         <providers>
             <add name="ec2UserDataConfigSectionProvider" type="Natol.EC2UserDataToConfig.EC2UserDataProtectedConfigurationProvider, Natol.EC2UserDataToConfig"/>
         </providers>
     </configProtectedData>
+```
 - Setup the configuration including the string format which contains the text `#USER_DATA#` - **this text will be replaced with the instance's user-data string**:
+```xml
     <EncryptedData>
         <ec2UserDataProviderInfo 
             defaultUserData="default"
             configLocationFormat="_ConfigurationContent\DemoConfiguration_LoadedFromEC2UserData_#USER_DATA#.config"
         />
     </EncryptedData>
+```
 - Create a selection of files with names according to your filename schema defined above, and a default one too just in case.
 
 ###Thanks
-This project uses the LitS3 library to retreive objects from Amazon's S3 Web Service, which has its home at [http://code.google.com/p/lits3/].
+This project uses the LitS3 library to retreive objects from Amazon's S3 Web Service, which has its home at http://code.google.com/p/lits3/.
 
 
 ###Limitations
